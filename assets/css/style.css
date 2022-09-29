@@ -256,18 +256,18 @@ article.active {
 }
 
 .has-scrollbar::-webkit-scrollbar {
-  width: 5px; /* for vertical scrollbar */
-  height: 5px; /* for horizontal scrollbar */
+  width:10px; /* for vertical scrollbar */
+  height:10px; /* for horizontal scrollbar */
 }
 
 .has-scrollbar::-webkit-scrollbar-track {
   background: var(--onyx);
-  border-radius: 5px;
+  border-radius:10px;
 }
 
 .has-scrollbar::-webkit-scrollbar-thumb {
   background: var(--orange-yellow-crayola);
-  border-radius: 5px;
+  border-radius:10px;
 }
 
 .has-scrollbar::-webkit-scrollbar-button { width: 20px; }
@@ -1775,7 +1775,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   body::-webkit-scrollbar-track { background: var(--smoky-black); }
 
   body::-webkit-scrollbar-thumb {
-    border: 5px solid var(--smoky-black);
+    border:10px solid var(--smoky-black);
     background: hsla(0, 0%, 100%, 0.1);
     border-radius: 20px;
     box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
