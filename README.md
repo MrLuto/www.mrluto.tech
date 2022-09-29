@@ -1,7 +1,7 @@
 
 # www.MrLuto.tech
 
-I forked this portofolio page and changed it a bit.
+I forked this portofolio page and changed it.
 
 
 ## Acknowledgements
