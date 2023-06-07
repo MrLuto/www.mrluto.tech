@@ -6,8 +6,9 @@ fetch(`https://api.github.com/users/${username}/repos`)
       // Lus door de array met repositories
       data.forEach(repo => {
         const repoName = repo.name;
-        const repoDescription = repo.description;
+        var repoDescription = repo.description;
         const repoUrl = repo.html_url;
+        if (repoDescription == null) repoDescription = "";
   
         // Een GET-verzoek naar de inhoud van de repository maken
         fetch(`https://api.github.com/repos/${username}/${repoName}/contents`)
