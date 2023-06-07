@@ -17,7 +17,7 @@ fetch(`https://api.github.com/users/${username}/repos`)
             const thumbnailFile = contents.find(file => file.name === "thumbnail.webp");
   
             // Als het bestand is gevonden, log de URL
-            var thumbnailUrl = "./assets/images/600x400.webp";
+            var thumbnailUrl = "./assets/images/noimg.webp";
             if (thumbnailFile) {
               thumbnailUrl = thumbnailFile.download_url;
               console.log(`Thumbnail URL voor ${repoName}: ${thumbnailUrl}`);
