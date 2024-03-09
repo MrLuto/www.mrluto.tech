@@ -1,6 +1,6 @@
-const username = "MrLuto";
+const GithubUsername = "MrLuto";
 
-fetch(`https://api.github.com/users/${username}/repos`)
+fetch(`https://api.github.com/users/${GithubUsername}/repos`)
     .then(response => response.json())
     .then(data => {
       // Lus door de array met repositories
