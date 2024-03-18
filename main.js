@@ -11,7 +11,7 @@ fetch(`https://api.github.com/users/${GithubUsername}/repos`)
         if (repoDescription == null) repoDescription = "";
   
         // Een GET-verzoek naar de inhoud van de repository maken
-        fetch(`https://api.github.com/repos/${username}/${repoName}/contents`)
+        fetch(`https://api.github.com/repos/${GithubUsername}/${repoName}/contents`)
           .then(response => response.json())
           .then(contents => {
             // Zoek naar het bestand "thumbnail.webp" in de inhoud van de repository
