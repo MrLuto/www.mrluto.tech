@@ -3,6 +3,23 @@ const GithubUsername = "MrLuto";
 fetch(`https://api.github.com/users/${GithubUsername}/repos`)
     .then(response => response.json())
     .then(data => {
+      let jsonResponse;
+      try {
+          jsonResponse = data;
+      } catch (error) {
+          // Handle parsing error
+          console.error("Error parsing JSON response:", error);
+          return false;
+      }
+    
+      // Check if the response contains the key "message"
+      if (jsonResponse && jsonResponse.hasOwnProperty("message")) {
+          console.error(data);
+          document.querySelector(".project-list").innerHTML += data.message;
+          return true;
+      } else {
+          return false;
+      }
       // Lus door de array met repositories
       data.forEach(repo => {
         const repoName = repo.name;
@@ -11,7 +28,7 @@ fetch(`https://api.github.com/users/${GithubUsername}/repos`)
         if (repoDescription == null) repoDescription = "";
   
         // Een GET-verzoek naar de inhoud van de repository maken
-        fetch(`https://api.github.com/repos/${username}/${repoName}/contents`)
+        fetch(`https://api.github.com/repos/${GithubUsername}/${repoName}/contents`)
           .then(response => response.json())
           .then(contents => {
             // Zoek naar het bestand "thumbnail.webp" in de inhoud van de repository
