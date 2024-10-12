@@ -18,13 +18,15 @@ fetch(`https://api.github.com/users/${GithubUsername}/repos`)
           document.querySelector(".project-list").innerHTML += data.message;
           return true;
       } else {
-          return false;
+          //return false;
       }
       // Lus door de array met repositories
+      
       data.forEach(repo => {
         const repoName = repo.name;
         var repoDescription = repo.description;
         const repoUrl = repo.html_url;
+        console.log("debug" + repoName);
         if (repoDescription == null) repoDescription = "";
   
         // Een GET-verzoek naar de inhoud van de repository maken
